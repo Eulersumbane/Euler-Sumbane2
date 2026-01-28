@@ -12,6 +12,9 @@
         table{
             width: 500px;
             border-collapse:collapse ;
+            margin-left: 3px;
+            padding-left:3px ;
+            position: relative;
         }
         td, th{
             border: 1px solid black;
@@ -25,6 +28,22 @@
             text-align: right;
 
         }
+        caption{
+            font-size: 1.5em;
+            font-weight: bolder;
+            padding: 10px;
+            background-color: lightgray;
+
+
+        }
+        tbody > tr:nth-child(2n)  {
+            background-color: lightgray;
+        }
+        thead > tr > th{
+            position:sticky;
+            top: -1px;
+            background-color: #383838;
+        }
 
     </style>
 </head>
@@ -32,10 +51,11 @@
     <h1><strong>Uso de Tabelas Grantes</strong></h1>
 
     <table>
+        <caption>Populacao das unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>Populacao</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px; ">Populacao</th>
             </tr>
 
         </thead>
@@ -145,7 +165,7 @@
 
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num">0000</td>
             </tr>
             
